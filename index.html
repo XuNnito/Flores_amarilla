@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Día de las Flores Amarillas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Arial:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="https://bcodestorague.anteroteobaldob.workers.dev/share/anteroteobaldob_gmail_com/IMG/ramo%20rosas%20amarillas.png">
+    <meta name="description" content="Una dedicatoria especial para el Día de las Flores Amarillas.">
+    <meta name="keywords" content="Flores Amarillas, Dedicatoria, Amor, Amistad">
+    <meta name="author" content="xunito">
+    <!-- Open Graph / Social image -->
+    <meta property="og:image" content="https://bcodestorague.anteroteobaldob.workers.dev/share/anteroteobaldob_gmail_com/IMG/ramo%20rosas%20amarillas.png">
+    <meta property="og:image:alt" content="Ramo de rosas amarillas">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://bcodestorague.anteroteobaldob.workers.dev/share/anteroteobaldob_gmail_com/IMG/ramo%20rosas%20amarillas.png">
+    <meta property="og:title" content="Día de las Flores Amarillas">
+</head>
+<body>
+    <div class="matrix-flowers" id="matrixFlowers"></div>
+    
+    <!-- Modal para capturar nombre -->
+    <div class="name-modal" id="nameModal">
+        <div class="name-modal-content">
+            <h2>¿Para quién es esta dedicatoria?</h2>
+            <input type="text" id="nameInput" placeholder="Escribe el nombre aquí..." maxlength="20">
+            <button id="nameSubmit">Crear Dedicatoria 💛</button>
+            <div class="name-preview" id="namePreview"></div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="header">
+            <h1>Feliz Día de las<br>Flores Amarillas</h1>
+            <div class="date">21 de Septiembre</div>
+            <div class="name-dedication" id="nameDedication">Para [NOMBRE]</div>
+        </div>
+        <button class="music-btn" id="musicBtn">♪</button>
+        <div class="photo-frame">
+            <img src="https://bcodestorague.anteroteobaldob.workers.dev/share/anteroteobaldob_gmail_com/IMG/ramo%20rosas%20amarillas.png" alt="Flores Amarillas">
+        </div>
+
+        <p class="message" style="animation-delay: 0.3s;">
+            <span id="personalMessage">[NOMBRE], este día especial, quiero que sepas...</span>
+        </p>
+
+        <!-- <p class="message" style="animation-delay: 0.6s;">Eres la luz que ilumina mi vida como el amarillo de estas flores.</p> -->
+
+        <button class="flower-btn" id="flowerBtn">🌼 Abre Mi Corazón</button>
+        
+        <div class="link-section" id="linkSection" style="display: none;">
+            <div class="generated-link">
+                <label>Enlace personalizado para <span id="linkForName">[NOMBRE]</span>:</label>
+                <div class="link-container">
+                    <input type="text" id="generatedLink" readonly>
+                    <button id="copyLink">📋 Copiar</button>
+                </div>
+                <button class="new-link-btn" id="newLinkBtn">✨ Crear para otra persona</button>
+            </div>
+        </div>
+
+        <div class="signature">Para Ti con Amor <span id="signatureName">[NOMBRE]</span>.</div>
+    </div>
+
+    <div class="modal" id="letterModal">
+        <span class="close-btn" id="closeBtn">×</span>
+        <div class="modal-content">
+            <div class="torn-paper">
+                <h2 class="letter-title">Para Mi Amor</h2>
+                
+                <div class="letter-content">
+                    <p>Querida <span id="letterName">[NOMBRE]</span>,</p>
+                    <p>En este Día de las Flores Amarillas, quiero expresarte todo lo que siento en mi corazón.</p>
+                    <p>Eres como un campo de flores amarillas que ilumina mis días, llenando mi vida de alegría y color. Cada momento a tu lado es un tesoro que atesoro profundamente.</p>
+                    <p>Recuerdo la primera vez que miré tu sonrisa de forma diferente y supe que ya estaba enamorado de ti.</p>
+                    <p>Tu amor es como el amarillo de estas flores: cálido, vibrante y lleno de vida. Tu risa es la melodía más dulce que he escuchado, y tu cariño es el regalo más valioso que he recibido.</p>
+                    <!-- <p>En este día, quiero prometerte que siempre estaré a tu lado, en las buenas y en las malas, apoyándote, amándote y construyendo un futuro juntos.</p> -->
+                    <p>Eres mi inspiración, mi fortaleza y mi razón para ser mejor cada día. Gracias por elegirme, por quererme y por ser tú.</p>
+                </div>
+                
+                <div class="letter-signature">Con todo mi Amor.</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/script.js"></script>
+</html>
