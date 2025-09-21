@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Verificar si hay un nombre en la URL
         const urlParams = new URLSearchParams(window.location.search);
         const nameFromUrl = urlParams.get('name');
-        
+
         if (nameFromUrl) {
             // Si viene de un enlace personalizado, solo mostrar la dedicatoria
             currentName = decodeURIComponent(nameFromUrl);
@@ -39,9 +39,18 @@ document.addEventListener('DOMContentLoaded', function() {
             // Si es una visita nueva, mostrar modal para crear dedicatoria
             nameModal.style.display = 'flex';
         }
-        
+
         // Iniciar animación de flores
         setInterval(createMatrixFlowers, 100);
+
+        // Intentar reproducir la música automáticamente
+        audio.play().then(function() {
+            musicBtn.textContent = '❚❚';
+            isPlaying = true;
+        }).catch(function(e) {
+            // Si el navegador bloquea el autoplay, esperar interacción
+            console.log("Autoplay bloqueado por el navegador.");
+        });
     }
     
     function updatePageWithName(name, showLinkSection = true) {
